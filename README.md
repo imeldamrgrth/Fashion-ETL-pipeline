@@ -27,10 +27,13 @@ The dataset includes information about fashion products such as:
 ## ETL Pipeline Architecture
 
 Website
+
 ↓
 Extract (Web Scraping with BeautifulSoup)
+
 ↓
 Transform (Data Cleaning & Processing with Pandas)
+
 ↓
 Load
   ├── CSV Storage
