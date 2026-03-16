@@ -1,4 +1,4 @@
-# Fashion Product ETL Pipeline
+# Fashion ETL Pipeline
 
 ## Overview
 
