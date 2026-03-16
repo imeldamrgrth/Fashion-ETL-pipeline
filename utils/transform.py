@@ -18,29 +18,29 @@ def transform_data(df):
         # remove invalid rating
         df = df[~df["Rating"].str.contains("Invalid", na=False)]
 
-        # ===== CLEAN PRICE =====
+        # CLEAN PRICE
         df["Price"] = df["Price"].str.replace("$", "", regex=False)
         df["Price"] = df["Price"].astype(float) * 16000
         df["Price"] = df["Price"].astype(int)
 
-        # ===== CLEAN RATING =====
+        # CLEAN RATING
         df["Rating"] = df["Rating"].str.replace("⭐", "", regex=False)
         df["Rating"] = df["Rating"].str.replace("/ 5", "", regex=False)
         df["Rating"] = df["Rating"].str.strip()
         df["Rating"] = df["Rating"].astype(float)
 
-        # ===== CLEAN COLORS =====
+        # CLEAN COLORS
         df["Colors"] = df["Colors"].str.replace("Colors", "", regex=False)
         df["Colors"] = df["Colors"].str.replace("Color", "", regex=False)
         df["Colors"] = df["Colors"].str.replace(":", "", regex=False)
         df["Colors"] = df["Colors"].str.strip()
         df["Colors"] = df["Colors"].str.extract(r"(\d+)").astype(int)
 
-        # ===== CLEAN SIZE =====
+        # CLEAN SIZE
         df["Size"] = df["Size"].str.replace("Size:", "", regex=False)
         df["Size"] = df["Size"].str.strip()
 
-        # ===== CLEAN GENDER =====
+        # CLEAN GENDER
         df["Gender"] = df["Gender"].str.replace("Gender:", "", regex=False)
         df["Gender"] = df["Gender"].str.strip()
 

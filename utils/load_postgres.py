@@ -6,7 +6,7 @@ def save_to_postgres(df):
     try:
 
         engine = create_engine(
-            "postgresql+psycopg2://postgres:postgres@localhost:5432/fashion_db"
+            "postgresql+psycopg2://postgres:password@localhost:5432/fashion_db"
         )
 
         df.to_sql(
