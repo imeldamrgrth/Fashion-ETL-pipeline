@@ -41,7 +41,6 @@ The dataset includes information about fashion products such as:
 ```
 fashion-etl-pipeline
 
-│
 ├── tests
 │   ├── conftest.py
 │   ├── test_extract.py
@@ -103,5 +102,3 @@ The pipeline produces:
 
 * Clean dataset stored as CSV
 * Data loaded into PostgreSQL database
-
----
